@@ -1,0 +1,119 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:lodash-fp/recommended",
+    "airbnb"
+  ],
+  "plugins": [
+    "lodash-fp",
+    "react",
+    "babel"
+  ],
+  "settings": {
+    "import/resolver": {
+      // "node": {
+      //   "paths": ["src"],
+      //   "extensions": [".js", ".jsx"],
+      //   "webpack": {
+      //     "config": "./webpack.config.js"
+      //   }
+      // }
+      "alias": [
+        ["_components", "./src/components"]
+      ]
+    },
+    "react": {
+      "version": "detect",
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "no-debugger": "off",
+    "global-require": "off",
+    "no-underscore-dangle": "off",
+    "function-paren-newline": "off",
+    "import/first": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "specialLink": [
+          "to"
+        ]
+      }
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/tabindex-no-positive": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "jsx-a11y/label-has-for": "off",
+    "lodash-fp/use-fp": "off",
+    "lodash-fp/consistent-name": "off",
+    "lodash-fp/no-extraneous-args": "off",
+    "lodash-fp/no-unused-result": "off",
+    "lodash-fp/prefer-constant": "off",
+    "lodash-fp/prefer-identity": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-did-update-set-state": "off",
+    "react/require-default-props": "off",
+    "react/prefer-stateless-function": [
+      2,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "babel/semi": [
+      "warn",
+      "always"
+    ],
+    "newline-after-var": "warn",
+    "newline-before-return": "warn",
+    "lines-between-class-members": [
+      "warn",
+      "always"
+    ],
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 2
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ]
+  },
+  "globals": {
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DEV__": true,
+    "__INJECT_HTML__": true,
+    "__APP_ENV__": true
+  }
+}

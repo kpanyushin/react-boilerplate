@@ -1,0 +1,32 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "dynamic-import-node",
+    "lodash",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "_hocs": "./src/hocs",
+          "_styles": "./src/styles",
+          "_components": "./src/components",
+        }
+      }
+    ]
+  ]
+}
